@@ -48,7 +48,7 @@ jobs:
             /repos/${{ github.repository }}/pulls \
             -f title='Amazing new feature' \
           -f body='Please pull these awesome changes in!' \
-          -f head='octocat:new-feature' \
+          -f head=${{ github.run_id }} \
           -f base='main' 
           
 
