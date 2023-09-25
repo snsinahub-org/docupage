@@ -27,11 +27,7 @@ jobs:
           SHA=`git rev-parse --short HEAD`
 
           echo $SHA
-          gh --help
-
-          # GitHub CLI api
-
-
+          
           gh api \
             --method POST \
             -H "Accept: application/vnd.github+json" \
