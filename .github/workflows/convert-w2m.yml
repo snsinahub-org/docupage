@@ -22,5 +22,12 @@ jobs:
         with:
           name: docx
           path: ${{ github.event.inputs.output_file }}
+      - name: test some commands
+        run: |
+          SHA=`git rev-parse --short HEAD`
+
+          echo $SHA
+          echo "hello world"
+        
           
           
