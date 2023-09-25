@@ -12,13 +12,12 @@ UI
 Part 1: development in your workstation/computer
 ------------------------------------------------
 
-![git-lifecycle-steps](media/rId22.jpg){width="5.833333333333333in"
-height="1.6077734033245845in"} I provide `Git Commands` for each steps
-in `part 1` if you wish to use `Linux/MacOS Terminal`, `Git Bash`,
-`Windows Powershell` or `Windows Command Prompt`. If you wish to use an
-`IDE` or a `Text Editor` wiht github integration feature, please consult
-documentations from the vendor. Keep in mind **All steps are same for
-IDEs, text editors, terminals, powershel and command prompt**
+I provide `Git Commands` for each steps in `part 1` if you wish to use
+`Linux/MacOS Terminal`, `Git Bash`, `Windows Powershell` or
+`Windows Command Prompt`. If you wish to use an `IDE` or a `Text Editor`
+wiht github integration feature, please consult documentations from the
+vendor. Keep in mind **All steps are same for IDEs, text editors,
+terminals, powershel and command prompt**
 
 ### All git commands you need for steps 1 to 5
 
@@ -93,9 +92,6 @@ changes to GitHub with help of push command.
 Part 2: Review and merge code in GitHub
 ---------------------------------------
 
-![pull-request](media/rId30.jpg){width="5.833333333333333in"
-height="1.6077734033245845in"}
-
 pull-request
 
 ### Step 6 Create a Pull Request to review changes by your peers
@@ -118,9 +114,6 @@ available in the repository's default branch.
 
 Developing code with GitHub at a glance
 ---------------------------------------
-
-![git-cycle](media/rId35.jpg){width="5.833333333333333in"
-height="4.414029965004374in"}
 
 git-cycle
 
