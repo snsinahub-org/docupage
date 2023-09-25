@@ -24,7 +24,7 @@ jobs:
           path: ${{ github.event.inputs.output_file }}
       - name: test some commands
         run: |
-          SHA=`git rev-parse --short HEAD`
+          SHA=`git log --pretty=format:'%H' -n 1`
 
           echo $SHA
           
