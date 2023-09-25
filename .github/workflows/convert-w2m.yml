@@ -27,7 +27,18 @@ jobs:
           SHA=`git rev-parse --short HEAD`
 
           echo $SHA
-          echo "hello world"
+          gh --help
+
+          # GitHub CLI api
+
+
+          gh api \
+            --method POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            /repos/snsinahub-org/docupage/git/refs \
+            -f ref=refs/heads/featureA \
+          -f sha=$SHA 
         
           
           
