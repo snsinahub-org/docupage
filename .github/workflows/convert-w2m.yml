@@ -34,7 +34,11 @@ jobs:
             -H "X-GitHub-Api-Version: 2022-11-28" \
             /repos/${{ github.repository }}/git/refs \
             -f ref=refs/heads/${{ github.run_id }} \
-          -f sha=$SHA 
+          -f sha=$SHA &&
+
+          git pull
+          git checkout ${{ github.run_id }} 
+
         env:
           GH_TOKEN: ${{ github.token }}
         
