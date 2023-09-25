@@ -35,6 +35,8 @@ jobs:
             /repos/snsinahub-org/docupage/git/refs \
             -f ref=refs/heads/featureA \
           -f sha=$SHA 
+        env:
+          GH_TOKEN: ${{ github.token }}
         
           
           
