@@ -48,7 +48,7 @@ jobs:
             -H "X-GitHub-Api-Version: 2022-11-28" \
             /repos/${{ github.repository }}/pulls \
             -f title='Add a markdown file to website' \
-          -f body='Please pull these awesome changes in!' \ 
+          -f body='Please pull these awesome changes in!' \
           -f head=${{ github.run_id }} \
           -f base='main' 
           
