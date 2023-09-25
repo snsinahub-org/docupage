@@ -37,6 +37,9 @@ jobs:
 
           # GitHub CLI api
 
+          git config --global user.email ${{ github.actor }}@users.noreply.github.com
+          git config --global user.name ${{ github.actor }}
+
           gh api \
             --method POST \
             -H "Accept: application/vnd.github+json" \
