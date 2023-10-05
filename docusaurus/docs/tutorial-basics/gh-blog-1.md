@@ -1,4 +1,4 @@
-**GitHub Learning Pathways: Learn from the best**
+# **GitHub Learning Pathways: Learn from the best**
 
 At GitHub, we’re not just about offering you a powerful platform to orchestrate your software development strategy. We’re also committed to surfacing community expertise and knowledge, so you and your team can get the most out of GitHub. Today, we are launching [<span class="underline">GitHub Learning Pathways</span>](https://resources.github.com/learn/pathways/?utm_source=Blog&utm_medium=Social&utm_campaign=launch)—prescriptive modules that build foundational knowledge, proficiency, and expertise through GitHub guided tutorials, combined with customer insights and best-practices from engineering leaders from forward looking organizations like Amplifon, Telus, Salesforce, Cariad, Datadog, DVAG, Itau, Stack Overflow, Coyote Logistics, and Hello Fresh.
 
