@@ -1,0 +1,61 @@
+name: V2 Convert word to markdown
+
+on: 
+  workflow_dispatch:
+    inputs:
+      input_file:
+        required: true
+      output_file:
+        required: true
+        default: "docusaurus/docs/tutorial-basics/git.md"
+      
+
+jobs:
+  convert_via_pandoc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - uses: docker://pandoc/core:2.9
+        with:           
+          args: --output "${{ github.event.inputs.output_file }}" -t gfm -f docx --wrap=none  -t gfm --extract-media=. -s "${{ github.event.inputs.input_file }}"
+      - name: upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: docx
+          path: ${{ github.event.inputs.output_file }}
+      - name: test some commands
+        run: |
+          SHA=`git log --pretty=format:'%H' -n 1`
+
+          echo $SHA
+          git config --global user.email ${{ github.actor }}@users.noreply.github.com
+          git config --global user.name ${{ github.actor }}
+          
+          git checkout -b ${{ github.run_id }} 
+          git add .
+          git commit -m "Convert docx to markdown"
+
+          git push -u origin ${{ github.run_id }}
+
+          # GitHub CLI api
+
+          
+
+          gh api \
+            --method POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            /repos/${{ github.repository }}/pulls \
+            -f title='Add a markdown file to website' \
+          -f body='Please pull these awesome changes in!' \
+          -f head=${{ github.run_id }} \
+          -f base='main' 
+          
+
+
+        env:
+          GH_TOKEN: ${{ github.token }}
+        
+          
+          
