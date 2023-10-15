@@ -1,0 +1,10 @@
+site_name: Root docs
+repo_url: https://github.com/snsinahub-org/docupage
+edit_uri: edit/main/docs
+
+nav:
+  - Home: docs/index.html
+
+docs_dir: docs
+plugins:
+  - techdocs-core
