@@ -3,6 +3,5 @@ site_name: 'docupage'
 nav:
   - Home: docs/index.html
 
-
-# plugins:
-#   - techdocs-core
+plugins:
+  - techdocs-core
