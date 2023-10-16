@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: docupage
+  annotations:
+    github.com/project-slug: snsinahub-org/docupage
+    backstage.io/techdocs-ref: url:https://github.com/snsinahub-org/docupage/tree/main
+spec:
+  type: service
+  lifecycle: experimental
+  owner: guests
