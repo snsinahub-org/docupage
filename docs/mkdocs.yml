@@ -1,8 +1,0 @@
-site_name: 'docupage'
-
-nav:
-  - Home: index.html
-
-
-# plugins:
-#   - techdocs-core
