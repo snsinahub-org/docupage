@@ -6,5 +6,5 @@ nav:
   - Home: docs/index.html
 
 docs_dir: docs
-plugins:
-  - techdocs-core
+# plugins:
+#   - techdocs-core
