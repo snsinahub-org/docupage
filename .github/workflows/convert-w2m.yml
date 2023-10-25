@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v3
       - uses: docker://pandoc/core:2.9
         with:
-          args: --output "${{ github.event.inputs.output_file }}" -t markdown -f docx "${{ github.event.inputs.input_file }}" --extract-media=/docusaurus/docs/tutorial-basics
+          args: --output "${{ github.event.inputs.output_file }}" -t markdown -f docx "${{ github.event.inputs.input_file }}" --extract-media=.
       - name: upload artifact
         uses: actions/upload-artifact@v3
         with:
