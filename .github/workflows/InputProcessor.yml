@@ -31,14 +31,17 @@ jobs:
           for d in input/; do
             mkdir -p output/$d
           done
-      - uses: docker://pandoc/core:2.9
-        with:
-          args: --output "${{ github.event.inputs.output_file }}" -t markdown -f docx "${{ github.event.inputs.input_file }}" --extract-media=docusaurus/docs/tutorial-basics
-      - name: upload artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: docx
-          path: ${{ github.event.inputs.output_file }}
+      - name: convert docx to md
+        run: |
+          find input/ -iname '*.docx' -type f -exec sh -c 'pandoc ${0} -t markdown -f docx --extract-media=. -o output/${0%.md}.md' {} \;
+      #- uses: docker://pandoc/core:2.9
+        #with:
+#          args: --output "${{ github.event.inputs.output_file }}" -t markdown -f docx "${{ github.event.inputs.input_file }}" --extract-media=docusaurus/docs/tutorial-basics
+#      - name: upload artifact
+ #       uses: actions/upload-artifact@v3
+  #      with:
+   #       name: docx
+    #      path: ${{ github.event.inputs.output_file }}
       - name: test some commands
         run: |
           SHA=`git log --pretty=format:'%H' -n 1`
@@ -65,7 +68,7 @@ jobs:
             -f title='Add a markdown file to website' \
           -f body='Please pull these awesome changes in!' \
           -f head=${{ github.run_id }} \
-          -f base='main' 
+          -f base='testing' 
           
 
 
