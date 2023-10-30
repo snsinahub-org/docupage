@@ -4,7 +4,7 @@ metadata:
   name: docupage
   annotations:
     github.com/project-slug: snsinahub-org/docupage
-    backstage.io/techdocs-ref: dir:.
+    backstage.io/techdocs-ref: url:https://github.com/snsinahub-org/docupage/tree/main
 spec:
   type: website
   lifecycle: experimental
